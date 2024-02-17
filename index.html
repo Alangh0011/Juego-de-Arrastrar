@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Números y Figuras</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="./styles.css"> <!-- Enlace al archivo de estilos CSS -->
+</head>
+<body>
+    <h1>Arrastra donde corresponde</h1> <!-- Encabezado principal -->
+    <div class="book"> <!-- Contenedor principal del juego -->
+        <!-- Contenedor de los botones de validación y reinicio -->
+        <div class="botones">
+            <div class="botones">
+                <button onclick="validate()">Validar</button> <!-- Botón para validar la configuración de las imágenes -->
+            </div>
+            <div class="botones">
+                <button onclick="restart()">Reiniciar</button> <!-- Botón para reiniciar el juego -->
+            </div>  
+        </div>
+          
+        <!-- Lado izquierdo del libro: Contenedor de las imágenes -->
+        <div class="left-page" id="leftPage">
+            <!-- Cada imagen se coloca dentro de un contenedor de figura -->
+            <div class="figura">
+                <img src="./images/1_apple.png" class="figure" id="apple1" draggable="true" ondragstart="drag(event)"> <!-- Imagen 1 -->
+            </div>
+            <div class="figura">
+                <img src="./images/2_apple.png" class="figure" id="apple2" draggable="true" ondragstart="drag(event)"> <!-- Imagen 2 -->
+            </div>
+            <div class="figura">
+                <img src="./images/3_apples.png" class="figure" id="apple3" draggable="true" ondragstart="drag(event)"> <!-- Imagen 3 -->
+            </div>
+        </div>
+        
+        <!-- Lado derecho del libro: Contenedor de las áreas de sujeción -->
+        <div class="right-page" id="rightPage" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- Cada área de sujeción se coloca dentro de un contenedor de figura -->
+            <div class="figura">
+                <div class="drop-area" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!-- Área de sujeción 1 -->
+                <h2>Apple 1</h2> <!-- Título del área de sujeción 1 -->
+            </div>
+            <div class="figura">
+                <div class="drop-area" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!-- Área de sujeción 2 -->
+                <h2>Apple 2</h2> <!-- Título del área de sujeción 2 -->
+            </div>
+            <div class="figura">
+                <div class="drop-area" id="dropArea3" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!-- Área de sujeción 3 -->
+                <h2>Apple 3</h2> <!-- Título del área de sujeción 3 -->
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script> <!-- Enlace al archivo de JavaScript -->
+</body>
+</html>
+

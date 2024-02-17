@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 100vh; /* Para hacer el diseño responsivo */
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive; /* Tipografía amigable para niños */
+    background-color: #f8f8f8; /* Color de fondo */
+    padding: 0;
+  }
+
+  .book {
+    display: flex;
+    border: 4px solid #ccc; /* Agrega bordes */
+    padding: 20px; /* Añade espacio interno */
+    max-width: 600px; /* Establece un ancho máximo */
+    width: 100%; /* Garantiza que el contenedor sea responsivo */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    background-size: cover;
+    justify-content: center;
+    
+  }
+  
+  
+  .left-page, .right-page {
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto; /* Agrega este estilo para centrar horizontalmente */
+    border: 4px solid burlywood; /* Agrega bordes */
+}
+
+  
+  .figure {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .drop-area {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed black;
+  }
+  .dragging {
+    opacity: 0.5; /* Reduce la opacidad de la imagen cuando está siendo arrastrada */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Establece el flujo de los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    position: relative; /* Establece el posicionamiento relativo para que el h1 pueda ser posicionado de forma absoluta dentro de este contenedor */
+  }
+
+  h1 {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 0; /* Fija el h1 en la parte superior del contenedor */
+  }
+
+  .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espacio entre los botones */
+}
+
+.botones button {
+    padding: 10px 20px; /* Padding para espacio interno */
+    margin: 10px; /* Espacio externo entre botones */
+    border: none; /* Quitamos el borde */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color de texto */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Quitamos subrayado */
+    display: inline-block; /* Elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition-duration: 0.4s; /* Duración de la transición */
+}
+
+.botones button:hover {
+    background-color: #45a049; /* Cambio de color al pasar el cursor */
+    color: white; /* Cambio de color de texto */
+}
+
+/* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+@media only screen and (max-width: 600px) {
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botones button {
+        margin: 5px;
+    }
+}
+
+  
+  
